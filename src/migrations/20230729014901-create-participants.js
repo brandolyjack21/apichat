@@ -23,7 +23,8 @@ module.exports = {
         references:{
           model:'Conversations',
           key:'id'
-        }
+        },
+        onDelete: 'CASCADE'
       }
     },{
       timestamps:false,

@@ -36,7 +36,8 @@ module.exports = {
         type: Sequelize.STRING
       },
       validEmail: {
-        type: Sequelize.BOOLEAN
+        type: Sequelize.BOOLEAN,
+        defaultValue:false
       },
       createdAt: {
         allowNull: false,

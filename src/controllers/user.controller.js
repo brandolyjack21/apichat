@@ -62,7 +62,17 @@ const loginUser = async (req, res, next) => {
     }
 }
 
+const allContacts = async (req,res,next) => {
+    try {
+        const contacts = await Users.findAll()
+        res.status(200).json(contacts)
+    } catch (error) {
+        next(error)
+    }
+}
+
 module.exports = {
     createUser,
-    loginUser
+    loginUser,
+    allContacts
 }

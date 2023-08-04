@@ -9,7 +9,7 @@ const validateResult = (req,res, next) => {
         next({
             status:400,
             errorName:'datos inválidos o faltantes',
-            error:{ errorsQty: errors, errors:error.errors.map((e) => (e.msg)) }
+            error:{ errorsQty: errors, errors:error.errors.map((e) => e.msg) }
         })
         // res.status(400).json({ errorsQty: errors, errors:error.errors.map((e) => (e.msg)) })
     }
